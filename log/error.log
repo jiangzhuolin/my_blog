@@ -1,0 +1,25 @@
+2017-03-11 16:40:26,401 [Thread-2:6040] [blog.views:14] [views:index] [ERROR]- [Errno 2] No such file or directory: 'test.text'
+2017-03-11 23:25:11,049 [Thread-2:3720] [blog.views:24] [views:index] [ERROR]- Invalid template name in 'extends' tag: ''. Got this from the 'base.html' variable.
+2017-03-17 01:02:59,802 [Thread-2:6484] [blog.views:50] [views:index] [ERROR]- 'date_publist'
+2017-03-17 01:05:10,402 [Thread-24:6336] [blog.views:50] [views:index] [ERROR]- 'date_publist'
+2017-03-17 01:08:13,455 [Thread-30:11912] [blog.views:50] [views:index] [ERROR]- 'date_publist'
+2017-03-17 01:10:33,723 [Thread-2:7348] [blog.views:50] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:14:36,924 [Thread-2:7312] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:16:46,348 [Thread-8:5924] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:17:12,809 [Thread-14:8680] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:18:18,923 [Thread-19:11984] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:18:32,450 [Thread-24:8292] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:21:09,258 [Thread-2:6976] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u6587' in position 5: Illegal byte sequence
+2017-03-17 01:22:14,557 [Thread-2:9380] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:29:52,014 [Thread-2:5856] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:30:36,710 [Thread-2:12108] [blog.views:51] [views:index] [ERROR]- 'locale' codec can't encode character '\u5e74' in position 2: Illegal byte sequence
+2017-03-17 01:32:44,912 [Thread-2:9392] [blog.views:52] [views:index] [ERROR]- embedded null byte
+2017-03-17 01:33:42,074 [Thread-2:7540] [blog.views:52] [views:index] [ERROR]- embedded null byte
+2017-03-17 01:59:26,075 [Thread-2:9528] [blog.views:75] [views:archive] [ERROR]- Cannot resolve keyword 'date_publish_icontains' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2017-03-17 02:01:04,331 [Thread-2:4404] [blog.views:75] [views:archive] [ERROR]- Cannot resolve keyword 'date_publish_icontains' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2017-03-17 02:02:52,727 [Thread-2:6084] [blog.views:76] [views:archive] [ERROR]- Cannot resolve keyword 'date_publish_icontains' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2017-03-17 02:06:14,424 [Thread-2:820] [blog.views:76] [views:archive] [ERROR]- Cannot resolve keyword 'date_publish_icontains' into field. Choices are: category, category_id, click_count, comment, content, date_publish, desc, id, is_recommend, tag, title, user, user_id
+2017-03-17 02:20:19,614 [Thread-21:7352] [blog.views:76] [views:archive] [ERROR]- Cannot use None as a query value
+2017-03-18 01:45:47,019 [Thread-9:7712] [blog.views:83] [views:archive] [ERROR]- unsupported operand type(s) for +: 'NoneType' and 'str'
+2017-03-18 01:58:50,402 [Thread-2:11024] [blog.views:85] [views:archive] [ERROR]- unsupported operand type(s) for +: 'NoneType' and 'str'
+2017-03-19 20:05:07,946 [Thread-18:524] [blog.views:79] [views:archive] [ERROR]- unsupported operand type(s) for +: 'NoneType' and 'str'

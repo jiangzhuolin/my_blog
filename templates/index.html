@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block left_content%}
+    {% include 'ad.html' %}
+    <div class="topnews">
+        <h2>最新文章</h2>
+        {% for article in article_list %}
+        <div class="blogs">
+            <ul>
+                <h3><a href="{% url 'article' %}?id={{ article.id }}">{{ article.title }}</a></h3>
+                <p>{{ article.desc }}</p>
+                <p class="autor">
+                  <!-- 循环获取文章的所有的标签 -->
+                  {% for tag in article.tag.all %}
+                  <span class="lm f_l"><a href="/">{{ tag.name }}&nbsp;</a></span>
+                  {% endfor %}
+                  <!-- 使用过滤器对日期进行格式化 -->
+                  <span class="dtime f_l">{{ article.date_publish | date:'Y-m-d' }}</span>
+                  <span class="viewnum f_r">浏览（<a href="/">{{ article.click_count }}</a>）</span>
+                  <!-- 注：由于文章与评论是一对多关系，因此需要使用comment_set -->
+                  <span class="pingl f_r">评论（<a href="/">{{ article.comment_set.all.count }}</a>）</span>
+                </p>
+            </ul>
+        </div>
+    {% endfor  %}
+    </div>
+    {% include 'pagination.html' %}
+{% endblock %}

@@ -266,3 +266,611 @@ Traceback (most recent call last):
   File "E:\WorkSpace\django_basic_env\lib\site-packages\django\db\models\expressions.py", line 240, in _output_field_or_none
     if self._output_field is None:
 AttributeError: 'OrderBy' object has no attribute '_output_field'
+2017-03-19 17:51:37,885 [Thread-27:123145399169024] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 17:51:38,076 [Thread-28:123145399169024] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 18:02:35,436 [Thread-40:123145399169024] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 18:02:35,563 [Thread-41:123145399169024] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 18:18:41,868 [Thread-60:123145399169024] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 18:18:42,000 [Thread-61:123145399169024] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 18:19:29,482 [Thread-86:123145399169024] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 18:19:29,598 [Thread-87:123145399169024] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 18:35:53,949 [Thread-88:123145399169024] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 487, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 485, in parse
+    filter_expression = self.compile_filter(token.contents)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 601, in compile_filter
+    return FilterExpression(token, self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 695, in __init__
+    filter_func = parser.find_filter(filter_name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 607, in find_filter
+    raise TemplateSyntaxError("Invalid filter: '%s'" % filter_name)
+django.template.exceptions.TemplateSyntaxError: Invalid filter: 'month_to_upper'
+2017-03-19 18:44:39,008 [Thread-93:123145399169024] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1132, in find_library
+    return parser.libraries[name]
+KeyError: 'myfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1189, in load
+    lib = find_library(parser, name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1136, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+future
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2017-03-19 18:47:05,723 [Thread-123:123145399169024] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1132, in find_library
+    return parser.libraries[name]
+KeyError: 'myfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1189, in load
+    lib = find_library(parser, name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1136, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+future
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2017-03-19 18:49:12,135 [Thread-124:123145399169024] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1132, in find_library
+    return parser.libraries[name]
+KeyError: 'myfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1189, in load
+    lib = find_library(parser, name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1136, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+future
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2017-03-19 18:52:07,900 [Thread-126:123145399169024] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1132, in find_library
+    return parser.libraries[name]
+KeyError: 'myfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1189, in load
+    lib = find_library(parser, name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1136, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+future
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2017-03-19 18:53:53,567 [Thread-129:123145399169024] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1132, in find_library
+    return parser.libraries[name]
+KeyError: 'myfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1189, in load
+    lib = find_library(parser, name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1136, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+future
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2017-03-19 18:59:34,078 [Thread-154:123145399169024] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1132, in find_library
+    return parser.libraries[name]
+KeyError: 'myfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1189, in load
+    lib = find_library(parser, name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1136, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+future
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2017-03-19 19:04:30,075 [Thread-156:123145404424192] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1132, in find_library
+    return parser.libraries[name]
+KeyError: 'templatetags'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1183, in load
+    lib = find_library(parser, name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1136, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'templatetags' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+future
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2017-03-19 19:05:46,012 [Thread-158:123145404424192] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1132, in find_library
+    return parser.libraries[name]
+KeyError: 'myfilter'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 117, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1183, in load
+    lib = find_library(parser, name)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1136, in find_library
+    name, "\n".join(sorted(parser.libraries.keys())),
+django.template.exceptions.TemplateSyntaxError: 'myfilter' is not a registered tag library. Must be one of:
+admin_list
+admin_modify
+admin_static
+admin_urls
+cache
+future
+i18n
+l10n
+log
+static
+staticfiles
+tz
+2017-03-19 19:12:45,555 [Thread-26:123145565622272] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:12:45,682 [Thread-27:123145565622272] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:16:58,761 [Thread-3:123145373061120] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:16:58,912 [Thread-4:123145367805952] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:19:55,291 [Thread-6:123145373061120] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:19:55,423 [Thread-7:123145367805952] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:32:19,592 [Thread-36:123145367805952] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:32:19,744 [Thread-37:123145367805952] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:33:19,462 [Thread-44:123145373061120] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:42:12,819 [Thread-46:123145373061120] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:42:13,008 [Thread-47:123145367805952] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:42:25,107 [Thread-49:123145373061120] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:42:25,256 [Thread-50:123145367805952] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 19:45:02,362 [Thread-2:123145329725440] [django.request:182] [base:get_response] [WARNING]- Not Found: /test
+2017-03-19 20:07:00,302 [Thread-12:123145415954432] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 122, in test
+    return  render(request,'test.html')
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 885, in do_for
+    sequence = parser.compile_filter(bits[in_index + 1])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 601, in compile_filter
+    return FilterExpression(token, self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 701, in __init__
+    "from '%s'" % (token[upto:], token))
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '(100)' from 'range(100)'
+2017-03-19 20:09:48,556 [Thread-43:123145415954432] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 20:09:48,644 [Thread-44:123145415954432] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 20:16:23,368 [Thread-57:123145421209600] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 20:16:23,491 [Thread-58:123145426464768] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 20:17:04,291 [Thread-63:123145421209600] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 20:17:04,405 [Thread-64:123145426464768] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 20:17:17,193 [Thread-68:123145421209600] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-19 20:17:17,259 [Thread-69:123145415954432] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg

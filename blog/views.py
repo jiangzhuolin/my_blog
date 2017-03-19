@@ -115,3 +115,8 @@ def article(request):
     except Article.DoesNotExist:
         return  render(request,'failure.html',{'reason':'The Article is not EXIST!'})
     return render(request,'article.html',locals())
+
+
+# 测试
+def test(request):
+    return  render(request,'test.html')

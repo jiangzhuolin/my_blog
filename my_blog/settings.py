@@ -222,6 +222,7 @@ LOGGING = {
 # 网站的基本信息
 SITE_NAME = '沉默的个人博客'
 SITE_DESC = '学无先后，达者为师'
+SITE_URL = 'localhost:8000/'
 WEIBO_SINA = 'http://weibo.sina.com/jiang'
 WEIBO_TENCET = 'http://weibo.sina.com/jiang'
 PRO_RSS = 'http://www.google.com'

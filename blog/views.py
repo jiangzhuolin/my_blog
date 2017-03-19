@@ -16,6 +16,7 @@ logger = logging.getLogger("blog.views")
 def global_setting(request):
     SITE_NAME=settings.SITE_NAME
     SITE_DESC = settings.SITE_DESC
+    SITE_URL = settings.SITE_URL
     # 分类数据
     category_list = Category.objects.all()
     # 文章归档数据

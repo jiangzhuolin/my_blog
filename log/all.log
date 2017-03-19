@@ -20765,3 +20765,1052 @@ Traceback (most recent call last):
   File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
     (bit, current))  # missing attribute
 django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:30:27,778 [Dummy-1:123145519075328] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:30:28,834 [Dummy-1:123145519075328] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:30:29,004 [Dummy-1:123145519075328] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SHOW FULL TABLES; args=None
+2017-03-19 20:30:29,178 [Dummy-1:123145519075328] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 20:30:56,817 [Dummy-1:123145490395136] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:30:57,972 [Dummy-1:123145490395136] [django.db.backends:89] [utils:execute] [DEBUG]- (0.195) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:30:58,146 [Dummy-1:123145490395136] [django.db.backends:89] [utils:execute] [DEBUG]- (0.173) SHOW FULL TABLES; args=None
+2017-03-19 20:30:58,320 [Dummy-1:123145490395136] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 20:32:35,631 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:32:35,789 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT COUNT(*) AS `__count` FROM `blog_article`; args=()
+2017-03-19 20:32:35,949 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:32:36,123 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:32:36,281 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:32:36,445 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.162) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:32:36,610 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.164) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:32:36,769 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:32:36,935 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.162) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:32:37,098 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC LIMIT 5; args=()
+2017-03-19 20:32:37,261 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_tag`.`id`, `blog_tag`.`name` FROM `blog_tag` INNER JOIN `blog_article_tag` ON (`blog_tag`.`id` = `blog_article_tag`.`tag_id`) WHERE `blog_article_tag`.`article_id` = 7 ORDER BY `blog_tag`.`id` ASC; args=(7,)
+2017-03-19 20:32:37,419 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SELECT COUNT(*) AS `__count` FROM `blog_comment` WHERE `blog_comment`.`article_id` = 7; args=(7,)
+2017-03-19 20:32:37,587 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.165) SELECT `blog_tag`.`id`, `blog_tag`.`name` FROM `blog_tag` INNER JOIN `blog_article_tag` ON (`blog_tag`.`id` = `blog_article_tag`.`tag_id`) WHERE `blog_article_tag`.`article_id` = 6 ORDER BY `blog_tag`.`id` ASC; args=(6,)
+2017-03-19 20:32:37,746 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT COUNT(*) AS `__count` FROM `blog_comment` WHERE `blog_comment`.`article_id` = 6; args=(6,)
+2017-03-19 20:32:37,904 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_tag`.`id`, `blog_tag`.`name` FROM `blog_tag` INNER JOIN `blog_article_tag` ON (`blog_tag`.`id` = `blog_article_tag`.`tag_id`) WHERE `blog_article_tag`.`article_id` = 5 ORDER BY `blog_tag`.`id` ASC; args=(5,)
+2017-03-19 20:32:38,067 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT COUNT(*) AS `__count` FROM `blog_comment` WHERE `blog_comment`.`article_id` = 5; args=(5,)
+2017-03-19 20:32:38,235 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.167) SELECT `blog_tag`.`id`, `blog_tag`.`name` FROM `blog_tag` INNER JOIN `blog_article_tag` ON (`blog_tag`.`id` = `blog_article_tag`.`tag_id`) WHERE `blog_article_tag`.`article_id` = 4 ORDER BY `blog_tag`.`id` ASC; args=(4,)
+2017-03-19 20:32:38,401 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.163) SELECT COUNT(*) AS `__count` FROM `blog_comment` WHERE `blog_comment`.`article_id` = 4; args=(4,)
+2017-03-19 20:32:38,561 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_tag`.`id`, `blog_tag`.`name` FROM `blog_tag` INNER JOIN `blog_article_tag` ON (`blog_tag`.`id` = `blog_article_tag`.`tag_id`) WHERE `blog_article_tag`.`article_id` = 3 ORDER BY `blog_tag`.`id` ASC; args=(3,)
+2017-03-19 20:32:38,722 [Thread-2:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT COUNT(*) AS `__count` FROM `blog_comment` WHERE `blog_comment`.`article_id` = 3; args=(3,)
+2017-03-19 20:32:38,724 [Thread-2:123145495650304] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'year' in template 'index.html'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'year'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'QueryDict' object has no attribute 'year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [year] in '<QueryDict: {}>'
+2017-03-19 20:32:38,725 [Thread-2:123145495650304] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'month' in template 'index.html'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'month'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'month'"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'QueryDict' object has no attribute 'month'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'month'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [month] in '<QueryDict: {}>'
+2017-03-19 20:32:42,960 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:32:43,941 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:32:44,743 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.801) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:32:44,902 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:32:45,061 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:32:45,231 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:32:45,869 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.637) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:32:46,028 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:32:46,187 [Thread-25:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:32:46,207 [Thread-26:123145495650304] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:32:46,664 [Thread-27:123145495650304] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:34:47,710 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:34:48,653 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:34:48,812 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:34:48,971 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:34:49,129 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:34:49,287 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:34:49,477 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.189) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:34:49,688 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.210) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:34:49,885 [Thread-33:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.194) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:35:28,832 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:35:29,879 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:35:30,055 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.176) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:35:30,225 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:35:30,400 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.174) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:35:30,572 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:35:30,744 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:35:30,915 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:35:31,088 [Thread-39:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:37:47,448 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:37:48,410 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:37:48,569 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:37:48,728 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:37:48,889 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:37:49,048 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:37:49,207 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:37:49,372 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.163) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:37:49,531 [Thread-45:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:38:55,276 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:38:56,238 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:38:56,395 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:38:56,554 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:38:56,714 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:38:56,872 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:38:57,031 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:38:57,216 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.183) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:38:57,375 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:38:57,534 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:38:57,693 [Thread-51:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:39:43,594 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.740) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:39:45,765 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (1.198) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:39:46,103 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.337) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:39:46,275 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:39:46,445 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:39:46,618 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:39:46,800 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.181) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:39:47,026 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.225) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:39:47,214 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.184) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:39:47,387 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:39:47,575 [Thread-57:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.186) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:41:29,988 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:41:31,024 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:41:31,194 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:41:31,366 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:41:31,536 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:41:31,709 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:41:31,883 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.172) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:41:32,058 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.174) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:41:32,234 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:41:32,408 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.172) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:41:32,579 [Thread-61:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:42:32,412 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:42:33,450 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:42:33,626 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.175) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:42:33,798 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:42:33,969 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:42:34,151 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.181) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:42:34,321 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:42:34,494 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:42:34,669 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:42:34,851 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.179) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:42:35,021 [Thread-64:123145495650304] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:44:21,095 [Dummy-1:123145550929920] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:44:22,191 [Dummy-1:123145550929920] [django.db.backends:89] [utils:execute] [DEBUG]- (0.167) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:44:22,360 [Dummy-1:123145550929920] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SHOW FULL TABLES; args=None
+2017-03-19 20:44:22,531 [Dummy-1:123145550929920] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+2017-03-19 20:45:20,130 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:45:21,171 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:45:21,341 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:45:21,532 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:45:21,703 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:45:21,883 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.178) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:45:22,059 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.174) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:45:22,231 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:45:22,406 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:45:22,582 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:45:22,751 [Thread-2:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:46:22,861 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:46:23,901 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:46:24,806 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.905) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:46:24,979 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:46:25,161 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.181) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:46:25,332 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:46:25,518 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.184) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:46:25,694 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.175) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:46:25,894 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.195) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:46:26,070 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.174) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:46:26,242 [Thread-3:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:46:26,266 [Thread-4:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:46:26,382 [Thread-5:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:51:22,543 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:51:23,509 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:51:23,668 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:51:23,843 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.172) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:51:24,401 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.556) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:51:24,714 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.312) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:51:24,873 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:51:25,034 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:51:25,205 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.167) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:51:25,365 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:51:25,532 [Thread-6:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.166) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:51:25,556 [Thread-7:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:51:25,669 [Thread-8:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:53:32,812 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:53:33,770 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:53:33,927 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:53:34,087 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:53:34,245 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:53:34,403 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:53:34,563 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:53:34,721 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:53:34,884 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:53:35,043 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:53:35,212 [Thread-9:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.167) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:53:35,231 [Thread-10:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:53:35,342 [Thread-11:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:54:26,565 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:54:27,623 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:54:27,798 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.175) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:54:27,970 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:54:28,141 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:54:28,312 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:54:28,483 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:54:28,653 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:54:28,826 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:54:29,000 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:54:29,221 [Thread-12:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.220) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:54:29,242 [Thread-13:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:54:29,352 [Thread-14:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:54:34,306 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:54:35,282 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:54:35,282 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:54:35,439 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:54:35,596 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:54:35,755 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:54:35,917 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:54:36,077 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:54:36,236 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:54:36,322 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:54:36,396 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:54:36,498 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.175) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:54:36,564 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.164) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:54:36,670 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:54:36,725 [Thread-15:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:54:36,842 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:54:37,013 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:54:37,188 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.173) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:54:37,361 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.172) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:54:37,538 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.173) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:54:37,712 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.172) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:54:37,882 [Thread-16:123145561440256] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:54:37,901 [Thread-17:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:54:37,974 [Thread-18:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:55:22,348 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:55:23,286 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:55:23,446 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:55:23,604 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:55:23,762 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:55:23,921 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:55:24,080 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:55:24,240 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:55:24,404 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:55:24,563 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:55:24,721 [Thread-19:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:55:24,765 [Thread-25:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:56:32,811 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:56:34,629 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 20:56:34,789 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 20:56:34,949 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 20:56:35,106 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 20:56:35,264 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 20:56:35,423 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 20:56:35,582 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 20:56:35,743 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 20:56:35,903 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 20:56:36,065 [Thread-38:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 20:56:36,088 [Thread-39:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 20:56:36,199 [Thread-40:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 21:00:12,541 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 21:00:13,519 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 21:00:13,679 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.159) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 6; args=(6,)
+2017-03-19 21:00:13,841 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.160) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 21:00:13,999 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.156) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 21:00:14,156 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 21:00:14,316 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 21:00:14,474 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.157) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 21:00:14,637 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 21:00:14,800 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.161) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 21:00:14,960 [Thread-41:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.158) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 21:00:14,981 [Thread-42:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 21:00:15,102 [Thread-43:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 21:01:15,419 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 21:01:16,474 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.176) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 21:01:16,646 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 21:01:16,818 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 21:01:16,991 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.172) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 21:01:17,166 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.173) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 21:01:17,945 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.778) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 21:01:18,118 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 21:01:18,292 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 21:01:18,465 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 21:01:18,635 [Thread-44:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 21:01:18,654 [Thread-46:123145566695424] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 21:01:18,705 [Thread-47:123145571950592] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 21:01:34,548 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.155) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 21:01:35,569 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.168) SET SQL_AUTO_IS_NULL = 0; args=None
+2017-03-19 21:01:35,739 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 21:01:35,912 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_article`.`date_publish` FROM `blog_article` ORDER BY `blog_article`.`date_publish` DESC; args=()
+2017-03-19 21:01:36,083 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_comment`.`article_id`, COUNT(`blog_comment`.`article_id`) AS `comment_count` FROM `blog_comment` GROUP BY `blog_comment`.`article_id` ORDER BY `comment_count` DESC; args=()
+2017-03-19 21:01:36,280 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.196) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 7; args=(7,)
+2017-03-19 21:01:36,454 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.172) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 3; args=(3,)
+2017-03-19 21:01:36,625 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_article`.`id`, `blog_article`.`title`, `blog_article`.`desc`, `blog_article`.`content`, `blog_article`.`click_count`, `blog_article`.`is_recommend`, `blog_article`.`date_publish`, `blog_article`.`user_id`, `blog_article`.`category_id` FROM `blog_article` WHERE `blog_article`.`id` = 5; args=(5,)
+2017-03-19 21:01:36,798 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.170) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` ORDER BY `blog_category`.`index` DESC, `blog_category`.`id` ASC; args=()
+2017-03-19 21:01:36,969 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.169) SELECT `blog_user`.`id`, `blog_user`.`password`, `blog_user`.`last_login`, `blog_user`.`is_superuser`, `blog_user`.`username`, `blog_user`.`first_name`, `blog_user`.`last_name`, `blog_user`.`email`, `blog_user`.`is_staff`, `blog_user`.`is_active`, `blog_user`.`date_joined`, `blog_user`.`avatar`, `blog_user`.`qq`, `blog_user`.`mobile` FROM `blog_user` WHERE `blog_user`.`id` = 1; args=(1,)
+2017-03-19 21:01:37,142 [Thread-50:123145556185088] [django.db.backends:89] [utils:execute] [DEBUG]- (0.171) SELECT `blog_category`.`id`, `blog_category`.`name`, `blog_category`.`index` FROM `blog_category` WHERE `blog_category`.`id` = 8; args=(8,)
+2017-03-19 21:01:37,163 [Thread-51:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+2017-03-19 21:01:37,341 [Thread-52:123145556185088] [django.template:927] [base:_resolve_lookup] [DEBUG]- Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern None ^uploads/(?P<path>.*)$>], [<RegexURLPattern upload_image ^admin/upload/(?P<dir_name>[^/]+)$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^index/>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern index ^$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern archive ^archive/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern article ^article/$>], [<RegexURLResolver <module 'blog.urls' from '/Users/jiangzhuolin/workspace/my_blog/blog/urls.py'> (None:None) ^>, <RegexURLPattern test ^test/$>]], 'path': 'article/images/default.jpg'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'

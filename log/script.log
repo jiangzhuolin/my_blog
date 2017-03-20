@@ -895,3 +895,85 @@ django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '
 2017-03-19 21:01:18,701 [Thread-47:123145571950592] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
 2017-03-19 21:01:37,159 [Thread-51:123145556185088] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
 2017-03-19 21:01:37,336 [Thread-52:123145556185088] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 02:55:13,990 [Thread-65:123145556185088] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 02:55:14,135 [Thread-66:123145556185088] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 02:56:00,603 [Thread-79:123145556185088] [django.request:182] [base:get_response] [WARNING]- Not Found: /index.html
+2017-03-20 03:13:47,964 [Thread-144:123145561440256] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 03:13:48,083 [Thread-145:123145566695424] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 03:14:32,692 [Thread-150:123145561440256] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 03:14:32,813 [Thread-151:123145566695424] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:44:04,132 [Thread-25:123145350651904] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-20 16:44:24,935 [Thread-28:123145350651904] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:44:25,024 [Thread-29:123145350651904] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:56:03,633 [Thread-3:123145475178496] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:56:03,675 [Thread-4:123145480433664] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:57:17,560 [Thread-9:123145475178496] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:57:17,653 [Thread-10:123145480433664] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:58:58,674 [Thread-3:123145516957696] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:58:58,763 [Thread-4:123145522212864] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:59:04,702 [Thread-10:123145516957696] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:59:04,737 [Thread-11:123145522212864] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:59:37,488 [Thread-17:123145511702528] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 16:59:37,523 [Thread-18:123145511702528] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 17:05:49,155 [Thread-3:123145429319680] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 17:05:49,258 [Thread-4:123145434574848] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 17:08:03,193 [Thread-3:123145407918080] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 17:08:03,286 [Thread-4:123145413173248] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 17:09:09,423 [Thread-3:123145472819200] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 17:09:09,506 [Thread-4:123145478074368] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/images/default.jpg
+2017-03-20 18:45:49,255 [Thread-11:123145461948416] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 508, in parse
+    compile_func = self.tags[command]
+KeyError: 'endblock'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 157, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 96, in render_to_string
+    template = get_template(template_name, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 32, in get_template
+    return engine.get_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 40, in get_template
+    return Template(self.engine.get_template(template_name, dirs), self)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 190, in get_template
+    template, origin = self.find_template(template_name, dirs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/engine.py", line 157, in find_template
+    name, template_dirs=dirs, skip=skip,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loaders/base.py", line 46, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 189, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 231, in compile_nodelist
+    return parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 267, in do_extends
+    nodelist = parser.parse()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 241, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 516, in parse
+    raise self.error(token, e)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 514, in parse
+    compiled_result = compile_func(self, token)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 1042, in do_if
+    nodelist = parser.parse(('endif',))
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 510, in parse
+    self.invalid_block_tag(token, command, parse_until)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 566, in invalid_block_tag
+    get_text_list(["'%s'" % p for p in parse_until]),
+django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 118: 'endblock', expected 'endif'. Did you forget to register or load this tag?

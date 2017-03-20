@@ -21,7 +21,9 @@
 
 <div class="entry">
   {{ article.content | safe }}
+    <br><br>
 </div>
+
 <span class="tags">
     <a href="http://www.baidu.org/?tag=android" rel="tag">android</a>
     , <a href="http://www.baidu.org/?tag=jdk" rel="tag">jdk</a>
@@ -38,44 +40,52 @@
     </h3>
 </div>
 <ol class="commentlist">
+    {% for comment in  comment_list %}
     <li class="alt" id="comment-59418">
         <div class="top">
-            <a href='http://www.yopoing.com' rel='external nofollow' class='url'>yopoing</a>
-            <span class="time"> @ <a href="#comment-59418" title="">2015-06-14 10:55</a></span>
+            <a href='http://www.yopoing.com' rel='external nofollow' class='url'>{{ comment.user }}</a>
+            <span class="time"> @ <a href="{{ comment.url }}" title="">{{ comment.date_publish | date:'Y-m-d H:M:s' }}</a></span>
         </div>
         <div>
-            <img alt='' src='images/default.jpg' class='avatar avatar-32 photo' height='32' width='32' />
+            <img alt='' src='http://1.gravatar.com/avatar/f7c05a53670301b5b3c226eb8c2b93c0?s=32&amp;d=&amp;r=G' class='avatar avatar-32 photo' height='32' width='32' />
         </div>
 
         <div class="body">
-            <p>好久没来看看了哦</p>
+            <p>{{ comment.content | safe }}</p>
         </div>
     </li>
 
+    {% for children_comment in comment.children_comment %}
     <li class="alt" id="comment-59542">
         <div class="reply">
             <div class="top">
-                <a href="http://xnbing.org" rel="external nofollow" class="url">开水白</a>
-                <span class="time"> @ <a href="#comment-59543" title="">1970-01-01 11:08</a></span>
+                <a href="http://xnbing.org" rel="external nofollow" class="url">{{ children_comment.user }}</a>
+                <span class="time"> @ <a href="{{ children_comment.url }}" title="">{{ children_comment.date_publish | date:'Y-m-d H:M:s' }}</a></span>
             </div>
             <div>
                 <img alt="" src="http://1.gravatar.com/avatar/f7c05a53670301b5b3c226eb8c2b93c0?s=32&amp;d=&amp;r=G" class="avatar avatar-32 photo" height="32" width="32">
             </div>
 
             <div class="body">
-                常来逛逛哦!
+                {{ children_comment.content }}
             </div>
         </div>
     </li>
+    {% endfor %}
+{% endfor %}
 </ol>
 <div id="commentform">
     <h3 id="respond">Add your comment now</h3>
+    {% if not request.user.is_authenticated %}
     <div class='login_info'>
-        还没有登陆？可以登录后再评论哦。<big><a href="">&raquo;去登录</a>&nbsp;<a href="">&raquo;去注册</a></big>
+        还没有登陆？可以登录后再评论哦。<big><a href="{% url 'login' %}">&raquo;去登录</a>&nbsp;<a href="{% url 'reg' %} }">&raquo;去注册</a></big>
     </div>
+    {% else %}
+      <div class='login_info'><b>{{ request.user.username }}</b>,快来写点评论吧!&nbsp;<a href="{% url 'logout' %}">注销</a></div>
+    {% endif %}
     <form action="http://www.baidu.org/wp-comments-post.php" method="post" id="commentform">
         <p>
-            <input type="text" name="author" id="author" value="yopoing" size="25" tabindex="1" class="comment_input" />
+            <input type="text" name="{{ request.user.name }}" id="author" value="yopoing" size="25" tabindex="1" class="comment_input" />
             <label for="author">Name (required)</label>
         </p>
         <p>

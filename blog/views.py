@@ -37,15 +37,7 @@ def global_setting(request):
     comment_count_list = Comment.objects.values('article').annotate(comment_count=Count('article')).order_by('-comment_count')
     article_comment_list = [Article.objects.get(pk=comment['article']) for comment in comment_count_list]
     return locals()
-    '''
-    return {
-         'category_list':category_list
-        ,'archive_list':archive_list
-        ,'article_comment_list':article_comment_list
-        ,'SITE_NAME':settings.SITE_NAME
-        ,'SITE_DESC':settings.SITE_DESC
-             }
-        '''
+
 
 # 定义index请求的响应方法
 def index(request):
@@ -77,7 +69,6 @@ def index(request):
 
         archive_list = Article.objects.distinct_date()
     except Exception as e:
-        print(e)
         logger.error(e)
     # locals() 函数可以将当前作用域的所有变量封装并传递给模板
     return render(request, 'index.html', locals())
@@ -132,13 +123,12 @@ def article(request):
                                     'article': id} if request.user.is_authenticated() else{'article': id})
 
         # 获取评论信息
-        #comments_count = Comment.objects.filter(article=article_id).count()
+        comments_count = Comment.objects.filter(article=article_id).count()
         comments = Comment.objects.filter(article=article_id).order_by('id')
         comment_list = []
 
         # 使用循环对评论层级进行处理
         for comment in comments:
-            print(comment.content)
             for each in comment_list:
                 if not hasattr(each,'children_comment'):
                     setattr(each,'children_comment',[])
@@ -147,8 +137,6 @@ def article(request):
                     break
             if comment.pid is None:
                     comment_list.append(comment)
-        print(comment_list)
-
     except Exception as e:
         logger.error(e)
 
@@ -159,18 +147,23 @@ def article(request):
 def comment_post(request):
     try:
         comment_form = CommentForm(request.POST)
+
         if comment_form.is_valid():
+            print(request.user.is_authenticated())
+
             #获取表单信息
             comment = Comment.objects.create(username=comment_form.cleaned_data["author"],
                                              email=comment_form.cleaned_data["email"],
                                              url=comment_form.cleaned_data["url"],
                                              content=comment_form.cleaned_data["comment"],
                                              article_id=comment_form.cleaned_data["article"],
-                                             user=request.user if request.user.is_authenticated() else None)
+                                             user=User.objects.get(id=request.user.id) if request.user.is_authenticated() else None)
+            #User.objects.get(username=request.user.id)
             comment.save()
         else:
             return render(request, 'failure.html', {'reason': comment_form.errors})
     except Exception as e:
+        print(e)
         logger.error(e)
     return redirect(request.META['HTTP_REFERER'])
 
@@ -244,3 +237,14 @@ def category(request):
     except Exception as e:
         logger.error(e)
     return render(request, 'category.html', locals())
+
+def test(reuest):
+    user_id = User.objects.get(id=1)
+    # 获取表单信息
+    comment = Comment.objects.create(username='charlie',
+                                     email='123@qq.com',
+                                     url='http://www.baidu.com',
+                                     content='好久不见',
+                                     article_id=7,
+                                     user=user_id)
+    comment.save()

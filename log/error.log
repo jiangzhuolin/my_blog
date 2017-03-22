@@ -37,3 +37,33 @@
 2017-03-20 18:49:00,522 [Thread-5:123145506676736] [blog.views:155] [views:article] [ERROR]- 'User' object has no attribute 'url'
 2017-03-20 18:49:10,839 [Thread-7:123145506676736] [blog.views:155] [views:article] [ERROR]- 'User' object has no attribute 'url'
 2017-03-20 18:52:39,867 [Thread-2:123145440206848] [blog.views:153] [views:article] [ERROR]- 'User' object has no attribute 'url'
+2017-03-22 05:34:22,866 [Thread-48:123145546825728] [blog.views:166] [views:comment_post] [ERROR]- 'username' is an invalid keyword argument for this function
+2017-03-22 05:38:31,266 [Thread-54:123145546825728] [blog.views:166] [views:comment_post] [ERROR]- 'username' is an invalid keyword argument for this function
+2017-03-22 05:44:36,169 [Thread-71:123145546825728] [blog.views:166] [views:comment_post] [ERROR]- 'username' is an invalid keyword argument for this function
+2017-03-22 05:49:25,590 [Thread-5:123145534427136] [blog.views:163] [views:comment_post] [ERROR]- 'username' is an invalid keyword argument for this function
+2017-03-22 05:58:10,316 [Thread-2:123145432518656] [blog.views:141] [views:article] [ERROR]- (1054, "Unknown column 'blog_comment.username' in 'field list'")
+2017-03-22 06:00:00,547 [Thread-6:123145432518656] [blog.views:163] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 06:01:27,050 [Thread-3:123145480482816] [blog.views:164] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 06:02:12,721 [Thread-3:123145477480448] [blog.views:164] [views:comment_post] [ERROR]- Cannot assign "'<built-in function id>'": "Comment.article" must be a "Article" instance.
+2017-03-22 18:57:53,374 [Thread-32:123145474678784] [blog.views:164] [views:comment_post] [ERROR]- Cannot assign "'<built-in function id>'": "Comment.article" must be a "Article" instance.
+2017-03-22 18:59:24,721 [Thread-2:123145340968960] [blog.views:164] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 19:25:22,462 [Thread-6:123145573703680] [blog.views:164] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 19:28:59,930 [Thread-8:123145476997120] [blog.views:164] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 20:08:53,755 [Thread-29:123145476997120] [blog.views:197] [views:do_reg] [ERROR]- 'url' is an invalid keyword argument for this function
+2017-03-22 20:11:39,578 [Thread-30:123145476997120] [blog.views:197] [views:do_reg] [ERROR]- 'url' is an invalid keyword argument for this function
+2017-03-22 20:13:17,185 [Thread-31:123145476997120] [blog.views:197] [views:do_reg] [ERROR]- 'url' is an invalid keyword argument for this function
+2017-03-22 20:18:29,311 [Thread-6:123145463320576] [blog.views:164] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 20:20:36,901 [Thread-2:123145477955584] [blog.views:165] [views:comment_post] [ERROR]- int() argument must be a string, a bytes-like object or a number, not 'SimpleLazyObject'
+2017-03-22 20:22:48,246 [Thread-3:123145319993344] [blog.views:165] [views:comment_post] [ERROR]- Cannot resolve keyword 'user' into field. Choices are: article, avatar, comment, date_joined, email, first_name, groups, id, is_active, is_staff, is_superuser, last_login, last_name, logentry, mobile, password, qq, url, user_permissions, username
+2017-03-22 20:24:03,890 [Thread-3:123145517146112] [blog.views:165] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 20:25:05,480 [Thread-3:123145569591296] [blog.views:165] [views:comment_post] [ERROR]- 'int' object has no attribute 'is_authenticated'
+2017-03-22 20:26:27,549 [Thread-3:123145467658240] [blog.views:166] [views:comment_post] [ERROR]- Cannot assign "2": "Comment.user" must be a "User" instance.
+2017-03-22 20:27:12,171 [Thread-3:123145485758464] [blog.views:166] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 20:28:31,602 [Thread-3:123145459412992] [blog.views:167] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 20:29:20,791 [Thread-3:123145536737280] [blog.views:167] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 20:31:01,033 [Thread-3:123145413722112] [blog.views:166] [views:comment_post] [ERROR]- int() argument must be a string, a bytes-like object or a number, not 'SimpleLazyObject'
+2017-03-22 20:32:10,095 [Thread-3:123145426944000] [blog.views:166] [views:comment_post] [ERROR]- 'User' object is not iterable
+2017-03-22 20:32:37,177 [Thread-3:123145354371072] [blog.views:166] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 20:36:16,156 [Thread-3:123145559875584] [blog.views:167] [views:comment_post] [ERROR]- Cannot assign "2": "Comment.user" must be a "User" instance.
+2017-03-22 20:36:58,801 [Thread-3:123145575219200] [blog.views:167] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-22 22:15:37,020 [Thread-27:123145367621632] [blog.views:167] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'

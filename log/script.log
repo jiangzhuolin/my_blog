@@ -977,3 +977,155 @@ Traceback (most recent call last):
   File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 566, in invalid_block_tag
     get_text_list(["'%s'" % p for p in parse_until]),
 django.template.exceptions.TemplateSyntaxError: Invalid block tag on line 118: 'endblock', expected 'endif'. Did you forget to register or load this tag?
+2017-03-21 13:18:15,537 [Thread-25:123145478131712] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-21 13:19:11,937 [Thread-33:123145478131712] [django.request:182] [base:get_response] [WARNING]- Not Found: /login/css/reglogin.css
+2017-03-21 13:19:16,458 [Thread-34:123145478131712] [django.request:182] [base:get_response] [WARNING]- Not Found: /reg/ }
+2017-03-21 18:31:59,149 [Thread-50:123145393381376] [django.request:182] [base:get_response] [WARNING]- Not Found: /reg/ }
+2017-03-21 18:32:07,390 [Thread-53:123145403891712] [django.request:182] [base:get_response] [WARNING]- Not Found: /reg/css/reglogin.css
+2017-03-21 18:33:44,302 [Thread-57:123145393381376] [django.request:182] [base:get_response] [WARNING]- Not Found: /reg/ }
+2017-03-21 18:34:24,983 [Thread-64:123145393381376] [django.request:182] [base:get_response] [WARNING]- Not Found: /login/css/reglogin.css
+2017-03-21 18:34:39,485 [Thread-66:123145398636544] [django.request:182] [base:get_response] [WARNING]- Not Found: /login/css/reglogin.css
+2017-03-21 18:34:47,336 [Thread-69:123145393381376] [django.request:182] [base:get_response] [WARNING]- Not Found: /login/css/reglogin.css
+2017-03-21 18:35:30,757 [Thread-74:123145393381376] [django.request:182] [base:get_response] [WARNING]- Not Found: /reg/css/reglogin.css
+2017-03-21 18:36:49,355 [Thread-76:123145393381376] [django.request:182] [base:get_response] [WARNING]- Not Found: /reg/css/reglogin.css
+2017-03-21 19:02:21,738 [Thread-91:123145393381376] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/comment_post
+2017-03-21 19:04:12,149 [Thread-96:123145393381376] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/comment_post
+2017-03-21 19:04:20,018 [Thread-99:123145393381376] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 507, in render
+    current_app=current_app)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'my_blog.comment/post' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 147, in article
+    return render(request,'article.html',locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 513, in render
+    six.reraise(*exc_info)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/utils/six.py", line 686, in reraise
+    raise value
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/defaulttags.py", line 499, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 600, in reverse
+    return force_text(iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs)))
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/urlresolvers.py", line 508, in _reverse_with_prefix
+    (lookup_view_s, args, kwargs, len(patterns), patterns))
+django.core.urlresolvers.NoReverseMatch: Reverse for 'comment/post' with arguments '()' and keyword arguments '{}' not found. 0 pattern(s) tried: []
+2017-03-21 19:10:45,299 [Thread-3:123145528995840] [django.request:103] [csrf:_reject] [WARNING]- Forbidden (CSRF cookie not set.): /comment_post
+2017-03-21 19:23:54,121 [Thread-7:123145528995840] [django.request:182] [base:get_response] [WARNING]- Not Found: /article/index.html
+2017-03-22 05:44:08,675 [Thread-64:123145557336064] [django.request:182] [base:get_response] [WARNING]- Not Found: /login/css/reglogin.css
+2017-03-22 18:57:14,285 [Thread-25:123145474678784] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-22 19:12:03,554 [Thread-2:123145364422656] [django.request:182] [base:get_response] [WARNING]- Not Found: /test
+2017-03-22 19:13:01,193 [Thread-2:123145314320384] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+TypeError: test() takes 0 positional arguments but 1 was given
+2017-03-22 19:13:36,726 [Thread-2:123145378168832] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 245, in test
+    user='admin')
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/query.py", line 399, in create
+    obj = self.model(**kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/base.py", line 439, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 207, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "'admin'": "Comment.user" must be a "User" instance.
+2017-03-22 19:14:46,466 [Thread-2:123145533476864] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 245, in test
+    user=User.username)
+AttributeError: type object 'User' has no attribute 'username'
+2017-03-22 19:17:06,606 [Thread-2:123145560096768] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 246, in test
+    user=1)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/query.py", line 399, in create
+    obj = self.model(**kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/base.py", line 439, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 207, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "1": "Comment.user" must be a "User" instance.
+2017-03-22 19:17:39,825 [Thread-5:123145560096768] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 246, in test
+    user=1)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/query.py", line 399, in create
+    obj = self.model(**kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/base.py", line 439, in __init__
+    setattr(self, field.name, rel_obj)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 207, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "1": "Comment.user" must be a "User" instance.
+2017-03-22 19:20:51,882 [Thread-2:123145573703680] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 158, in get_response
+    % (callback.__module__, view_name))
+ValueError: The view blog.views.test didn't return an HttpResponse object. It returned None instead.
+2017-03-22 19:38:13,352 [Thread-11:123145476997120] [django.request:182] [base:get_response] [WARNING]- Not Found: /reg/css/reglogin.css
+2017-03-22 19:55:55,206 [Thread-23:123145482252288] [django.request:182] [base:get_response] [WARNING]- Not Found: /login/css/reglogin.css
+2017-03-22 20:08:02,919 [Thread-26:123145476997120] [django.request:103] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /reg/
+2017-03-22 20:08:29,669 [Thread-27:123145476997120] [django.request:103] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /reg/

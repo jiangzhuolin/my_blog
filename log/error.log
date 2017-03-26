@@ -67,3 +67,6 @@
 2017-03-22 20:36:16,156 [Thread-3:123145559875584] [blog.views:167] [views:comment_post] [ERROR]- Cannot assign "2": "Comment.user" must be a "User" instance.
 2017-03-22 20:36:58,801 [Thread-3:123145575219200] [blog.views:167] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
 2017-03-22 22:15:37,020 [Thread-27:123145367621632] [blog.views:167] [views:comment_post] [ERROR]- invalid literal for int() with base 10: '<built-in function id>'
+2017-03-23 07:46:53,258 [Thread-16:123145435963392] [blog.views:17] [myfilter:month_to_upper] [ERROR]- 'str' object has no attribute 'month'
+2017-03-23 07:55:08,011 [Thread-7:123145451532288] [blog.views:17] [myfilter:month_to_upper] [ERROR]- 'str' object has no attribute 'month'
+2017-03-23 07:55:24,912 [Thread-14:123145451532288] [blog.views:17] [myfilter:month_to_upper] [ERROR]- 'str' object has no attribute 'month'

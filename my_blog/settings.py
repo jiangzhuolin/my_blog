@@ -11,10 +11,10 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 """
 
 import os
+import socket
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -23,12 +23,44 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '^c#$#8hgn7j*dbef9+%_e$jts+$-rb5y)9k%te0meuve@2t^yh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = []
+# DEBUG=False
+
+if socket.gethostname() == 'dev_laptop':
+    DEBUG = True
+    #DATABASE_NAME = 'devdb'
+else:
+    DEBUG = False
+    #DATABASE_NAME = 'production_db'
+
+ALLOWED_HOSTS = ['*']
 
 
 AUTH_USER_MODEL = 'blog.User'
+
+# 定义一个邮件的发送服务器，用于从服务器向外发送邮件
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_USE_TLS = False
+# SERVER_EMAIL = 'jiangzhuolin@chicv.com'
+# EMAIL_HOST = 'smtp.exmail.qq.com'
+# EMAIL_PORT = 25
+# EMAIL_HOST_USER = 'jiangzhuolin@chicv.com'
+# EMAIL_HOST_PASSWORD = 'Jiang050709'
+# DEFAULT_FROM_EMAIL = 'jiangzhuolin <jiangzhuolin@chicv.com>'
+
+
+
+
+# 定义一个管理员邮件，来接收异常代码信息
+ADMINS = (
+('Charlie Jiang','jiangzhuolin@outlook.com'),
+)
+
+# 定义一个管理者邮箱，来接收404信息
+MANAGERS = (
+('Charlie Jiang', 'jiangzhuolin@outlook.com'),
+)
+
 
 
 # Application definition
@@ -52,6 +84,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 配置一个邮件发送的中间件
+    'django.middleware.common.BrokenLinkEmailsMiddleware',
 ]
 
 ROOT_URLCONF = 'my_blog.urls'
@@ -78,6 +112,7 @@ WSGI_APPLICATION = 'my_blog.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
+# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -85,7 +120,7 @@ DATABASES = {
         'NAME': 'blogdb',
         'USER': 'blog',
         'PASSWORD':'blog123',
-        'HOST':'localhost',
+        'HOST':'127.0.0.1',
         'PORT':'3306',
     }
 }
@@ -115,7 +150,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -127,10 +162,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+#STATIC_ROOT = '/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/contrib/admin/static/'
 STATIC_URL = '/static/'
 STATICFILES_DIRS=(
     os.path.join(BASE_DIR, 'static'),
 )
+print('+++++++++++%s+++++++++++'%STATICFILES_DIRS)
 
 # 上传文件路径配置
 MEDIA_URL = '/uploads/'

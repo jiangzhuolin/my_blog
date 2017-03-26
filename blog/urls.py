@@ -10,5 +10,6 @@ urlpatterns = [
     url(r'^reg/$', views.do_reg,name='reg'),
     url(r'^logout/$', views.do_logout,name='logout'),
     url(r'^comment_post$', views.comment_post,name='comment_post'),
+    url(r'^category', views.category,name='category'),
     url(r'^test', views.test,name='test'),
 ]

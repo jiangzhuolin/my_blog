@@ -9,6 +9,7 @@ from django.db.models import Count
 from django.core.urlresolvers import reverse
 from django.contrib.auth import logout,login,authenticate
 from django.contrib.auth.hashers import make_password
+from django.core.mail import send_mail
 
 
 from blog.forms import *
@@ -30,14 +31,19 @@ def global_setting(request):
     archive_list = Article.objects.distinct_date()
     # 广告数据
     # 标签云数据
+    tag_list = Tag.objects.all()
     # 友情链接
     # 文章排行榜
+    # 点击排行
+    viewed_count_list = Article.objects.all().order_by('-click_count')[:6]
     # 评论排行
     # 从Comment模型中取出article并按article分组计数，再按计数的由高到低排序
-    comment_count_list = Comment.objects.values('article').annotate(comment_count=Count('article')).order_by('-comment_count')
+    comment_count_list = Comment.objects.values('article').annotate(comment_count=Count('article')).order_by('-comment_count')[:6]
     article_comment_list = [Article.objects.get(pk=comment['article']) for comment in comment_count_list]
-    return locals()
+    # 推荐
+    recommended_list = Article.objects.all().filter(is_recommend=True)[:6]
 
+    return locals()
 
 # 定义index请求的响应方法
 def index(request):
@@ -236,15 +242,8 @@ def category(request):
         article_list = getPage(request, article_list)
     except Exception as e:
         logger.error(e)
-    return render(request, 'category.html', locals())
+    return render(request, 'index.html', locals())
 
-def test(reuest):
-    user_id = User.objects.get(id=1)
-    # 获取表单信息
-    comment = Comment.objects.create(username='charlie',
-                                     email='123@qq.com',
-                                     url='http://www.baidu.com',
-                                     content='好久不见',
-                                     article_id=7,
-                                     user=user_id)
-    comment.save()
+def test(request):
+
+    return render(request,'test.html')

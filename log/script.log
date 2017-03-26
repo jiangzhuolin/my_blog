@@ -1129,3 +1129,992 @@ ValueError: The view blog.views.test didn't return an HttpResponse object. It re
 2017-03-22 19:55:55,206 [Thread-23:123145482252288] [django.request:182] [base:get_response] [WARNING]- Not Found: /login/css/reglogin.css
 2017-03-22 20:08:02,919 [Thread-26:123145476997120] [django.request:103] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /reg/
 2017-03-22 20:08:29,669 [Thread-27:123145476997120] [django.request:103] [csrf:_reject] [WARNING]- Forbidden (CSRF token missing or incorrect.): /reg/
+2017-03-23 07:35:17,294 [Thread-8:123145393860608] [django.request:182] [base:get_response] [WARNING]- Not Found: /index.html
+2017-03-23 07:43:17,178 [Thread-3:123145526280192] [django.request:182] [base:get_response] [WARNING]- Not Found: /{$ url 'category' $}
+2017-03-23 07:44:24,565 [Thread-3:123145435963392] [django.request:182] [base:get_response] [WARNING]- Not Found: /{$ url 'category' $}
+2017-03-23 07:45:17,070 [Thread-8:123145430708224] [django.request:182] [base:get_response] [WARNING]- Not Found: /{$ url 'category' $}
+2017-03-23 07:46:53,259 [Thread-16:123145435963392] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /category
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 239, in category
+    return render(request, 'article.html', locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 1043, in render
+    output = self.filter_expression.resolve(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 736, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/templatetags/myfilter.py", line 18, in month_to_upper
+    return key.month
+AttributeError: 'str' object has no attribute 'month'
+2017-03-23 07:55:08,011 [Thread-7:123145451532288] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /category
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 239, in category
+    return render(request, 'article.html', locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 1043, in render
+    output = self.filter_expression.resolve(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 736, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/templatetags/myfilter.py", line 18, in month_to_upper
+    return key.month
+AttributeError: 'str' object has no attribute 'month'
+2017-03-23 07:55:24,912 [Thread-14:123145451532288] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /category
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 239, in category
+    return render(request, 'article.html', locals())
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/shortcuts.py", line 67, in render
+    template_name, context, request=request, using=using)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader.py", line 97, in render_to_string
+    return template.render(context, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/backends/django.py", line 95, in render
+    return self.template.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 206, in render
+    return self._render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 173, in render
+    return compiled_parent._render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 197, in _render
+    return self.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/loader_tags.py", line 69, in render
+    result = block.nodelist.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 992, in render
+    bit = node.render_annotated(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 959, in render_annotated
+    return self.render(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 1043, in render
+    output = self.filter_expression.resolve(context)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/template/base.py", line 736, in resolve
+    new_obj = func(obj, *arg_vals)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/templatetags/myfilter.py", line 18, in month_to_upper
+    return key.month
+AttributeError: 'str' object has no attribute 'month'
+2017-03-23 07:59:09,443 [Thread-12:123145585397760] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/base.css
+2017-03-23 07:59:09,444 [Thread-13:123145590652928] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/login.css
+2017-03-23 07:59:14,918 [Thread-14:123145595908096] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/base.css
+2017-03-23 07:59:14,920 [Thread-15:123145569632256] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/login.css
+2017-03-23 08:00:14,419 [Thread-18:123145569632256] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/dashboard.css
+2017-03-23 08:00:14,435 [Thread-19:123145569632256] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/base.css
+2017-03-23 08:02:03,553 [Thread-21:123145574887424] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/base.css
+2017-03-23 08:02:03,557 [Thread-22:123145580142592] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/dashboard.css
+2017-03-23 13:48:28,089 [Thread-3:123145450459136] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 13:48:28,132 [Thread-4:123145455714304] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 13:48:28,141 [Thread-5:123145460969472] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-23 13:48:28,152 [Thread-6:123145466224640] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 13:48:28,157 [Thread-7:123145471479808] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 13:48:28,168 [Thread-8:123145445203968] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 13:48:28,174 [Thread-9:123145445203968] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 13:48:28,181 [Thread-10:123145445203968] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 13:48:28,188 [Thread-11:123145445203968] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 13:48:35,944 [Thread-13:123145450459136] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/base.css
+2017-03-23 13:48:35,949 [Thread-14:123145455714304] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/dashboard.css
+2017-03-23 13:48:44,894 [Thread-15:123145460969472] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 13:48:44,896 [Thread-16:123145466224640] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 13:49:22,127 [Thread-22:123145450459136] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 13:49:22,133 [Thread-23:123145455714304] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 13:49:22,150 [Thread-24:123145460969472] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-23 13:49:22,155 [Thread-25:123145466224640] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 13:49:22,161 [Thread-26:123145471479808] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 13:49:22,169 [Thread-27:123145445203968] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 13:49:22,177 [Thread-28:123145445203968] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 13:49:22,184 [Thread-29:123145445203968] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 13:49:22,189 [Thread-30:123145445203968] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 13:50:32,496 [Thread-3:123145551937536] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 13:50:32,498 [Thread-6:123145567703040] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 13:50:32,499 [Thread-7:123145572958208] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 13:50:32,501 [Thread-4:123145557192704] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 13:50:32,502 [Thread-5:123145562447872] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-23 13:50:32,521 [Thread-8:123145546682368] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 13:50:32,530 [Thread-9:123145546682368] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 13:50:32,537 [Thread-10:123145546682368] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 13:50:32,544 [Thread-11:123145546682368] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 13:50:32,716 [Thread-12:123145546682368] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 13:50:32,754 [Thread-13:123145546682368] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 13:50:32,797 [Thread-14:123145546682368] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 13:50:32,807 [Thread-15:123145551937536] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 13:50:32,823 [Thread-16:123145557192704] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 13:50:32,832 [Thread-17:123145562447872] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 13:51:57,565 [Thread-3:123145323143168] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 13:51:57,567 [Thread-6:123145338908672] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 13:51:57,569 [Thread-7:123145344163840] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 13:51:57,571 [Thread-4:123145328398336] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 13:51:57,573 [Thread-5:123145333653504] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-23 13:51:57,597 [Thread-8:123145317888000] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 13:51:57,604 [Thread-9:123145317888000] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 13:51:57,614 [Thread-10:123145317888000] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 13:51:57,621 [Thread-11:123145317888000] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 13:51:57,745 [Thread-12:123145317888000] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 13:51:57,819 [Thread-13:123145317888000] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 13:51:57,848 [Thread-14:123145317888000] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 13:51:57,851 [Thread-15:123145323143168] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 13:51:57,856 [Thread-16:123145328398336] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 13:51:57,861 [Thread-17:123145333653504] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 13:52:23,926 [Thread-3:123145413685248] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 13:52:23,929 [Thread-4:123145418940416] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 13:52:23,931 [Thread-7:123145434705920] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-23 13:52:23,933 [Thread-5:123145424195584] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 13:52:23,935 [Thread-6:123145429450752] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 13:52:23,962 [Thread-8:123145408430080] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 13:52:23,970 [Thread-9:123145408430080] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 13:52:23,979 [Thread-10:123145408430080] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 13:52:23,987 [Thread-11:123145408430080] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 13:52:24,237 [Thread-12:123145408430080] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 13:52:24,257 [Thread-13:123145408430080] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 13:52:24,292 [Thread-14:123145408430080] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 13:52:24,297 [Thread-15:123145413685248] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 13:52:24,300 [Thread-16:123145418940416] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 13:52:24,314 [Thread-17:123145424195584] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 18:18:55,525 [Thread-3:123145528999936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:18:55,532 [Thread-4:123145534255104] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 18:18:55,536 [Thread-6:123145544765440] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 18:18:55,538 [Thread-5:123145539510272] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-23 18:18:55,540 [Thread-7:123145550020608] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 18:18:55,554 [Thread-8:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 18:18:55,560 [Thread-9:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 18:18:55,566 [Thread-10:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 18:18:55,570 [Thread-11:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 18:18:55,631 [Thread-12:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 18:18:55,652 [Thread-13:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 18:18:55,670 [Thread-14:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 18:18:55,675 [Thread-15:123145528999936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 18:18:55,681 [Thread-16:123145534255104] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 18:18:55,687 [Thread-17:123145528999936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 18:19:03,232 [Thread-18:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:19:03,236 [Thread-19:123145528999936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 18:19:22,163 [Thread-21:123145528999936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:19:22,166 [Thread-22:123145534255104] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-23 18:19:22,169 [Thread-24:123145544765440] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 18:19:22,172 [Thread-23:123145539510272] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-23 18:19:22,174 [Thread-25:123145550020608] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 18:19:22,201 [Thread-26:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 18:19:22,211 [Thread-27:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 18:19:22,221 [Thread-28:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 18:19:22,228 [Thread-29:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 18:19:22,377 [Thread-30:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-23 18:19:22,481 [Thread-31:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-23 18:19:22,535 [Thread-32:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-23 18:19:22,541 [Thread-33:123145528999936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-23 18:19:22,545 [Thread-34:123145534255104] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-23 18:19:22,554 [Thread-35:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-23 18:19:49,481 [Thread-36:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:20:06,672 [Thread-42:123145523744768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:20:08,947 [Thread-43:123145528999936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:20:10,975 [Thread-44:123145534255104] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:20:12,780 [Thread-45:123145539510272] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:20:15,014 [Thread-46:123145544765440] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:30:23,586 [Thread-6:123145396879360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 18:30:25,993 [Thread-7:123145402134528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 22:16:37,223 [Thread-12:123145402134528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 22:17:38,969 [Thread-17:123145402134528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 22:17:50,943 [Thread-20:123145396879360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-23 22:18:03,299 [Thread-22:123145402134528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 00:04:28,090 [Thread-3:123145363542016] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 243, in test
+    return rendersdf(request,'test.html')
+NameError: name 'rendersdf' is not defined
+2017-03-24 00:33:19,139 [Thread-2:123145575878656] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 00:42:22,169 [Thread-2:123145563623424] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 00:44:23,780 [Thread-2:123145337765888] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 00:44:26,320 [Thread-3:123145337765888] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 00:44:28,960 [Thread-4:123145337765888] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 00:50:02,215 [Thread-9:123145337765888] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test1
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 00:50:12,139 [Thread-10:123145343021056] [django.request:182] [base:get_response] [WARNING]- Not Found: /tab
+2017-03-24 00:54:14,423 [Thread-2:123145393639424] [django.request:182] [base:get_response] [WARNING]- Not Found: /tab
+2017-03-24 00:54:21,675 [Thread-3:123145398894592] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 00:55:56,331 [Thread-2:123145470058496] [django.request:182] [base:get_response] [WARNING]- Not Found: /tab
+2017-03-24 00:55:59,815 [Thread-3:123145475313664] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 00:55:59,890 [Thread-4:123145480568832] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 01:02:40,018 [Thread-2:123145563877376] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 01:02:45,992 [Thread-3:123145569132544] [django.request:182] [base:get_response] [WARNING]- Not Found: /teab
+2017-03-24 01:11:00,040 [Thread-2:123145484832768] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 01:11:00,900 [Thread-3:123145490087936] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 242, in test
+    return renderer(request,'test.html')
+NameError: name 'renderer' is not defined
+2017-03-24 01:17:47,737 [Thread-2:123145384329216] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /test
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 244, in test
+    send_mail('Testing', 'This is a test message', 'jiang_zhuolin@sina.com', ['jiangzhuolin@outlook.com'])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 61, in send_mail
+    return mail.send()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 67, in open
+    self.connection.login(self.username, self.password)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 729, in login
+    raise last_exception
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 720, in login
+    initial_response_ok=initial_response_ok)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 641, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (535, b'5.7.8 authentication failed')
+2017-03-24 01:35:37,245 [Thread-2:123145540780032] [django.request:182] [base:get_response] [WARNING]- Not Found: /teab
+2017-03-24 01:38:04,922 [Thread-2:123145322164224] [django.request:182] [base:get_response] [WARNING]- Not Found: /tesa
+2017-03-24 18:54:05,967 [Thread-6:123145327419392] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 18:54:07,448 [Thread-7:123145322164224] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 18:54:08,670 [Thread-8:123145322164224] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 18:54:09,910 [Thread-9:123145322164224] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 18:54:11,125 [Thread-10:123145322164224] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 18:54:11,129 [Thread-11:123145327419392] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 18:54:11,131 [Thread-12:123145332674560] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 18:54:11,134 [Thread-13:123145337929728] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 18:54:11,140 [Thread-14:123145343184896] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 18:54:12,360 [Thread-15:123145322164224] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 18:54:12,365 [Thread-16:123145327419392] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 18:55:05,826 [Thread-3:123145435877376] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 18:55:05,828 [Thread-4:123145441132544] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 18:55:05,830 [Thread-5:123145446387712] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 18:55:05,837 [Thread-7:123145456898048] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 18:55:05,842 [Thread-6:123145451642880] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 18:55:07,012 [Thread-8:123145430622208] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 18:55:07,163 [Thread-9:123145435877376] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 18:55:08,275 [Thread-10:123145430622208] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 18:55:08,277 [Thread-11:123145435877376] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 18:55:08,283 [Thread-12:123145441132544] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 18:55:08,288 [Thread-13:123145446387712] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 18:55:09,447 [Thread-15:123145441132544] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 18:55:09,449 [Thread-14:123145430622208] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 18:55:09,451 [Thread-16:123145446387712] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 18:56:00,483 [Thread-3:123145561661440] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 18:56:00,484 [Thread-4:123145566916608] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 18:56:00,485 [Thread-5:123145572171776] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 18:56:00,486 [Thread-6:123145577426944] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 18:56:00,487 [Thread-7:123145582682112] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 18:56:01,730 [Thread-8:123145556406272] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 18:56:01,733 [Thread-9:123145561661440] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 18:56:02,967 [Thread-11:123145561661440] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 18:56:02,969 [Thread-10:123145556406272] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 18:56:02,971 [Thread-12:123145566916608] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 18:56:02,977 [Thread-13:123145572171776] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 18:56:04,176 [Thread-14:123145556406272] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 18:56:22,015 [Thread-3:123145392832512] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 18:56:22,016 [Thread-4:123145398087680] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 18:56:22,018 [Thread-5:123145403342848] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 18:56:22,019 [Thread-6:123145408598016] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 18:56:22,020 [Thread-7:123145413853184] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 18:56:23,949 [Thread-8:123145387577344] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 18:56:23,952 [Thread-9:123145392832512] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 18:56:25,281 [Thread-10:123145392832512] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 18:56:25,283 [Thread-11:123145398087680] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 18:56:25,288 [Thread-12:123145403342848] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 18:56:25,293 [Thread-13:123145408598016] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 18:56:26,390 [Thread-14:123145387577344] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 18:56:26,392 [Thread-15:123145392832512] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 18:56:26,395 [Thread-16:123145398087680] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 18:58:07,805 [Thread-17:123145387577344] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:04:51,793 [Thread-4:123145477001216] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 19:04:51,798 [Thread-5:123145482256384] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 19:04:51,803 [Thread-6:123145487511552] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 19:04:51,805 [Thread-7:123145492766720] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:04:51,813 [Thread-8:123145466490880] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:04:53,130 [Thread-9:123145466490880] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:04:54,402 [Thread-10:123145466490880] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:28:34,230 [Thread-3:123145498890240] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 19:28:34,232 [Thread-4:123145504145408] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 19:28:34,233 [Thread-5:123145509400576] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 19:28:34,240 [Thread-6:123145493635072] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:28:34,243 [Thread-7:123145514655744] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:28:36,138 [Thread-8:123145493635072] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:28:36,140 [Thread-9:123145498890240] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:28:37,439 [Thread-10:123145498890240] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:28:37,542 [Thread-11:123145493635072] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:28:37,544 [Thread-12:123145504145408] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 19:28:37,548 [Thread-13:123145509400576] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 19:28:39,155 [Thread-14:123145493635072] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:28:39,156 [Thread-15:123145498890240] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:28:39,158 [Thread-16:123145504145408] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 19:29:05,658 [Thread-3:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 19:29:05,660 [Thread-4:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 19:29:05,662 [Thread-5:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 19:29:05,664 [Thread-6:123145493676032] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:29:05,666 [Thread-7:123145498931200] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:29:07,005 [Thread-8:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:29:07,007 [Thread-9:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:29:08,273 [Thread-10:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:29:08,275 [Thread-11:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:29:08,282 [Thread-12:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 19:29:08,285 [Thread-13:123145493676032] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 19:29:09,695 [Thread-14:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:32:27,499 [Thread-16:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 19:32:27,506 [Thread-17:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 19:32:27,517 [Thread-18:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 19:32:27,521 [Thread-19:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:32:27,528 [Thread-20:123145493676032] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:32:29,080 [Thread-21:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:32:29,594 [Thread-22:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:32:31,015 [Thread-23:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:32:31,017 [Thread-24:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 19:32:31,019 [Thread-25:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:32:31,023 [Thread-26:123145493676032] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 19:32:32,775 [Thread-28:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:32:32,777 [Thread-27:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:32:32,783 [Thread-29:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 19:32:32,787 [Thread-30:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 19:32:56,358 [Thread-32:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 19:32:56,359 [Thread-33:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 19:32:56,361 [Thread-34:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 19:32:56,365 [Thread-35:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:32:56,367 [Thread-36:123145493676032] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:32:59,872 [Thread-37:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:32:59,874 [Thread-38:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:32:59,875 [Thread-39:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 19:32:59,878 [Thread-40:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:32:59,880 [Thread-41:123145493676032] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 19:33:02,178 [Thread-42:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:33:02,180 [Thread-43:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:33:02,183 [Thread-44:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 19:33:04,459 [Thread-46:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-24 19:33:04,462 [Thread-47:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:33:04,466 [Thread-49:123145498931200] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-24 19:33:04,468 [Thread-50:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:33:04,470 [Thread-48:123145493676032] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-24 19:33:06,049 [Thread-51:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:33:06,149 [Thread-52:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-24 19:33:07,631 [Thread-53:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-24 19:33:07,632 [Thread-54:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:33:07,635 [Thread-55:123145483165696] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-24 19:33:07,641 [Thread-56:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 19:33:10,035 [Thread-57:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-24 19:33:10,038 [Thread-58:123145477910528] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-24 19:33:10,040 [Thread-59:123145488420864] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-24 19:33:11,604 [Thread-60:123145472655360] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-25 01:13:44,820 [Thread-3:123145401888768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-25 01:13:44,823 [Thread-6:123145417654272] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-25 01:13:44,825 [Thread-7:123145422909440] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-25 01:13:44,826 [Thread-4:123145407143936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-25 01:13:44,828 [Thread-5:123145412399104] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-25 01:13:46,173 [Thread-8:123145396633600] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-25 01:13:46,235 [Thread-9:123145401888768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-25 01:13:47,253 [Thread-10:123145396633600] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-25 01:13:47,421 [Thread-11:123145401888768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-25 01:13:47,423 [Thread-13:123145412399104] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-25 01:13:47,425 [Thread-12:123145407143936] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-25 01:13:48,600 [Thread-14:123145401888768] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-25 10:44:41,896 [Thread-13:123145369763840] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_06.png
+2017-03-25 10:44:45,498 [Thread-14:123145369763840] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_05.png
+2017-03-25 10:46:20,769 [Thread-17:123145369763840] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_05.png
+2017-03-25 10:46:20,905 [Thread-18:123145375019008] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_06.png
+2017-03-25 10:46:55,356 [Thread-21:123145369763840] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_07.png
+2017-03-25 10:46:55,927 [Thread-22:123145375019008] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_05.png
+2017-03-25 10:47:07,222 [Thread-24:123145369763840] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_05.png
+2017-03-25 11:11:11,669 [Thread-3:123145542123520] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_06.png
+2017-03-25 11:14:14,902 [Thread-3:123145406881792] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_06.png
+2017-03-25 11:14:14,939 [Thread-4:123145412136960] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_04.png
+2017-03-25 11:14:31,698 [Thread-5:123145406881792] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /article/
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/jiangzhuolin/workspace/my_blog/blog/views.py", line 118, in article
+    article = Article.objects.get(pk=article_id)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/manager.py", line 122, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/query.py", line 378, in get
+    clone = self.filter(*args, **kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/query.py", line 790, in filter
+    return self._filter_or_exclude(False, *args, **kwargs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/query.py", line 808, in _filter_or_exclude
+    clone.query.add_q(Q(*args, **kwargs))
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1243, in add_q
+    clause, _ = self._add_q(q_object, self.used_aliases)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1269, in _add_q
+    allow_joins=allow_joins, split_subq=split_subq,
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1203, in build_filter
+    condition = self.build_lookup(lookups, col, value)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/sql/query.py", line 1099, in build_lookup
+    return final_lookup(lhs, rhs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/lookups.py", line 19, in __init__
+    self.rhs = self.get_prep_lookup()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/lookups.py", line 57, in get_prep_lookup
+    return self.lhs.output_field.get_prep_lookup(self.lookup_name, self.rhs)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 744, in get_prep_lookup
+    return self.get_prep_value(value)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/db/models/fields/__init__.py", line 976, in get_prep_value
+    return int(value)
+ValueError: invalid literal for int() with base 10: ''
+2017-03-25 11:21:03,176 [Thread-3:123145546174464] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_06.png
+2017-03-25 11:21:03,243 [Thread-4:123145540919296] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/ico_04.png
+2017-03-25 11:21:18,625 [Thread-6:123145546174464] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/base.css
+2017-03-25 11:21:18,627 [Thread-7:123145540919296] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/dashboard.css
+2017-03-25 11:22:56,456 [Thread-13:123145546174464] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/base.css
+2017-03-25 11:22:56,458 [Thread-14:123145551429632] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/admin/css/dashboard.css
+2017-03-25 18:35:55,955 [Thread-3:123145569189888] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-25 18:35:55,960 [Thread-4:123145574445056] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-25 18:35:55,963 [Thread-5:123145563934720] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-25 18:35:55,973 [Thread-6:123145579700224] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-25 18:35:55,974 [Thread-7:123145584955392] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-25 18:35:57,417 [Thread-8:123145563934720] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-25 18:35:57,488 [Thread-11:123145579700224] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-25 18:35:57,501 [Thread-12:123145584955392] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-25 18:35:57,507 [Thread-9:123145569189888] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-25 18:35:57,509 [Thread-10:123145574445056] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-25 18:35:58,742 [Thread-13:123145569189888] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-25 18:55:31,436 [Thread-3:123145393901568] [django.request:182] [base:get_response] [WARNING]- Not Found: /favicon.ico
+2017-03-25 18:56:00,801 [Thread-5:123145393901568] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/base.css
+2017-03-25 18:56:00,810 [Thread-6:123145399156736] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/jquery.min.js
+2017-03-25 18:56:00,812 [Thread-7:123145404411904] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/css/index.css
+2017-03-25 18:56:00,815 [Thread-8:123145409667072] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-25 18:56:00,817 [Thread-9:123145414922240] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-25 18:56:00,837 [Thread-8:123145409667072] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/js/sliders.js
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,839 [Thread-6:123145399156736] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/js/jquery.min.js
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,841 [Thread-7:123145404411904] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/css/index.css
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,844 [Thread-9:123145414922240] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/js/nav.js
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,845 [Thread-5:123145393901568] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/css/base.css
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,854 [Thread-10:123145420177408] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/sliders.js
+2017-03-25 18:56:00,860 [Thread-10:123145420177408] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/js/sliders.js
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,861 [Thread-11:123145393901568] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-25 18:56:00,862 [Thread-12:123145399156736] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-25 18:56:00,863 [Thread-13:123145404411904] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-25 18:56:00,865 [Thread-14:123145409667072] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-25 18:56:00,870 [Thread-11:123145393901568] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/images/a1.jpg
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,873 [Thread-13:123145404411904] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/images/a3.jpg
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,875 [Thread-12:123145399156736] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/images/a2.jpg
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,876 [Thread-14:123145409667072] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/images/a4.jpg
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,886 [Thread-15:123145393901568] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/js/nav.js
+2017-03-25 18:56:00,889 [Thread-15:123145393901568] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/js/nav.js
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,898 [Thread-16:123145393901568] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a1.jpg
+2017-03-25 18:56:00,902 [Thread-17:123145399156736] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a2.jpg
+2017-03-25 18:56:00,905 [Thread-18:123145404411904] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a3.jpg
+2017-03-25 18:56:00,907 [Thread-16:123145393901568] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/images/a1.jpg
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,909 [Thread-19:123145409667072] [django.request:182] [base:get_response] [WARNING]- Not Found: /static/images/a4.jpg
+2017-03-25 18:56:00,911 [Thread-17:123145399156736] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/images/a2.jpg
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,916 [Thread-18:123145404411904] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/images/a3.jpg
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2017-03-25 18:56:00,919 [Thread-19:123145409667072] [django.request:284] [base:handle_uncaught_exception] [ERROR]- Internal Server Error: /static/images/a4.jpg
+Traceback (most recent call last):
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/handlers/base.py", line 235, in get_response
+    response = middleware_method(request, response)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/middleware/common.py", line 153, in process_response
+    fail_silently=True)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/__init__.py", line 110, in mail_managers
+    mail.send(fail_silently=fail_silently)
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/message.py", line 292, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 100, in send_messages
+    new_conn_created = self.open()
+  File "/workspace/python/django_blog_venv/lib/python3.6/site-packages/django/core/mail/backends/smtp.py", line 58, in open
+    self.connection = connection_class(self.host, self.port, **connection_params)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 335, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/smtplib.py", line 306, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 722, in create_connection
+    raise err
+  File "/usr/local/Cellar/python3/3.6.0_1/Frameworks/Python.framework/Versions/3.6/lib/python3.6/socket.py", line 713, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused

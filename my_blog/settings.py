@@ -24,14 +24,14 @@ SECRET_KEY = '^c#$#8hgn7j*dbef9+%_e$jts+$-rb5y)9k%te0meuve@2t^yh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-# DEBUG=False
+DEBUG=False
 
-if socket.gethostname() == 'dev_laptop':
-    DEBUG = True
-    #DATABASE_NAME = 'devdb'
-else:
-    DEBUG = False
-    #DATABASE_NAME = 'production_db'
+# if socket.gethostname() == 'dev_laptop':
+#     DEBUG = True
+#     #DATABASE_NAME = 'devdb'
+# else:
+#     DEBUG = False
+#     #DATABASE_NAME = 'production_db'
 
 ALLOWED_HOSTS = ['*']
 
